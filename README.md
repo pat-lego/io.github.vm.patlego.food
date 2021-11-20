@@ -1,4 +1,4 @@
-# food-site
+# Food & Recipe Site
 
 ## Build Setup
 
