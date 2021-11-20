@@ -1,5 +1,5 @@
 <template>
-  <Tutorial/>
+  <Sidebar/>
 </template>
 
 <script>
