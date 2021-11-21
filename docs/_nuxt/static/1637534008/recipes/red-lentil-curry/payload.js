@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/recipes/red-lentil-curry", {data:[{}],fetch:{},mutations:void 0});
