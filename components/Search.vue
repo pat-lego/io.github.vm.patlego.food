@@ -1,43 +1,50 @@
 <template>
-    <input v-model="search" @keydown="filter" type="text" placeholder="Search for recipe">
+  <div>
+    <input v-model="search" type="text" placeholder="Search for recipe" />
+  </div>
 </template>
 <script>
-
 export default {
-    data() {
-        return {
-            search: ''
-        }
+  data() {
+    return {
+      search: "",
+    };
+  },
+  props: {
+    data: {
+      type: Array,
+      required: true,
     },
-    props: {
-        data: {
-            type: Array,
-            required: true
-        },
-        field: {
-            type: String,
-            required: true
-        }
+    field: {
+      type: String,
+      required: true,
     },
-    methods: {
-        filter: function() {
-            const array = []
-            
-            if (typeof this.search  === 'undefined') {
-                return this.data
-            }
+  },
+  watch: {
+    search: function(newSearch, oldSearch) {
+      const array = [];
 
-            if (this.search.trim() === '') {
-                return this.data
-            }
+      if (typeof this.search === "undefined") {
+        this.$emit("filtered-dt", this.data);
+        return this.data;
+      }
 
-            for (let dt of this.data) {
-                if (dt[this.field] && dt[this.field].toLowerCase().includes(this.search.toLowerCase())) {
-                    array.push(dt)
-                }
-            }
-            this.$emit('filtered-dt', array)
+      if (this.search.trim() === "") {
+        this.$emit("filtered-dt", this.data);
+        return this.data;
+      }
+
+      for (let dt of this.data) {
+        if (
+          dt[this.field] &&
+          dt[this.field].toLowerCase().includes(this.search.toLowerCase())
+        ) {
+          array.push(dt);
         }
-    }
-}
+      }
+      this.$emit("filtered-dt", array);
+      return array;
+    },
+  },
+};
 </script>
