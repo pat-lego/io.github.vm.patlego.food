@@ -21,9 +21,9 @@
     <!-- Small Display Sidebar -->
     <div class="flex w-full md:hidden">
       <div class="flex flex-col w-full align-middle">
-        <div class="bg-gray-100">
+        <div class="flex flex-row w-full bg-gray-100">
           <p
-            class="w-min h-full p-1 text-2xl font-extrabold"
+            class="w-min h-full p-1 pr-2 text-2xl font-extrabold"
             @click="mobile.hovering = !mobile.hovering"
           >
             Recipes
@@ -34,8 +34,13 @@
           :class="{ hidden: !mobile.hovering }"
         >
           <li
+             class="break-words hover:text-blue-500 font-semibold"
+          >
+              <Search class="w-1/2 justify-end	" :data="list" :field="'name'" @filtered-dt="filteredResult" />
+          </li>
+          <li
             class="break-words hover:text-blue-500 font-semibold"
-            v-for="item in list"
+            v-for="item in filteredList"
             :key="item.name"
           >
             <a :href="'recipes/' + item.link">{{ item.name }}</a>
