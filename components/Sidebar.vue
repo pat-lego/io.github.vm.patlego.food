@@ -1,22 +1,16 @@
 <template>
   <div>
     <!-- Medium Display Sidebar -->
-    <div
-      class="
-        md:flex md:flex-col
-        p-2
-        w-60
-        pt-4
-        hidden
-        overflow-y-scroll
-      "
-    >
+    <div class="md:flex md:flex-col p-2 w-60 pt-4 hidden overflow-y-scroll">
+      <div class="pt-2 pb-2">
+        <Search :data="list" :field="'name'" @filtered-dt="filteredResult" />
+      </div>
       <p class="text-2xl font-extrabold">Recipes</p>
       <div class="flex flex-col items-center pt-8">
         <ul class="h-screen">
           <li
             class="break-words hover:text-blue-500 font-semibold p-2"
-            v-for="item in list"
+            v-for="item in filteredList"
             :key="item.name"
           >
             <a :href="'recipes/' + item.link">{{ item.name }}</a>
@@ -65,7 +59,16 @@ export default {
           tags: ["curry", "indian", "lentils"],
         },
       ],
+      filteredList: []
     };
   },
+  mounted() {
+    this.filteredList = this.list;
+  },
+  methods: {
+    filteredResult: function(result) {
+      this.filteredList = result;
+    }
+  }
 };
 </script>

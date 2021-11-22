@@ -48,7 +48,7 @@
         <div
           class="flex flex-row w-full justify-center p-1 md:p-2"
           v-for="pic in food"
-          :key="pic.row"
+          :key="pic.row.name"
         >
           <img
             v-for="name in pic.row"

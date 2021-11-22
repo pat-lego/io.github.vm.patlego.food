@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{251:function(e,n,t){"use strict";t.r(n);var r={head:function(){return{title:"Red Lentil Curry"}}},l=t(43),component=Object(l.a)(r,(function(){var e=this,n=e.$createElement;return(e._self._c||n)("div",[e._v("You found me")])}),[],!1,null,null,null);n.default=component.exports}}]);
