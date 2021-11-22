@@ -3,7 +3,7 @@
     <Sidebar />
     <div class="flex flex-col w-full border-l-4">
       <p
-        class="flex w-full font-extrabold justify-center text-3xl p-8 uppercase"
+        class="flex w-full font-extrabold justify-center md:text-3xl text-xl p-2 md:p-8 uppercase"
       >
         Welcome to my recipe book
       </p>
@@ -11,11 +11,9 @@
         <div class="w-1/2 flex flex-col justify-center items-center w-full">
           <img
             class="
-              intro
+              md:h-110
               object-contain
               md:object-scale-down
-              shadow-2xl
-              rounded-md
               transition
               duration-500
               ease-in-out
@@ -29,11 +27,9 @@
         <div class="w-1/2 flex flex-col justify-center items-center w-full">
           <img
             class="
-              intro
+              md:h-110
               object-contain
               md:object-scale-down
-              shadow-2xl
-              rounded-md
               transition
               duration-500
               ease-in-out
@@ -45,19 +41,19 @@
           <p class="text-2xl">This is my assistant</p>
         </div>
       </div>
-      <div class="flex w-full justify-center p-8">
+      <div class="flex w-full justify-center p-2 md:p-8">
         <p class="text-2xl uppercase">Together we build this....</p>
       </div>
       <div class="flex flex-col w-full h-auto">
         <div
-          class="flex flex-row w-full justify-center p-2"
+          class="flex flex-row w-full justify-center p-1 md:p-2"
           v-for="pic in food"
           :key="pic.row"
         >
           <img
             v-for="name in pic.row"
             :key="name"
-            class="food w-1/3 object-contain md:object-scale-down rounded-md"
+            class="w-1/3 object-contain md:object-scale-down pl-1 pr-1"
             :src="require(`~/assets/index/food/${name}`)"
           />
         </div>
@@ -107,13 +103,6 @@ export default {
 };
 </script>
 <style scoped>
-img.intro {
-  height: 30rem;
-}
-
-img.food {
-  height: 20rem;
-}
 p {
   font-family: "Oswald", sans-serif;
 }

@@ -25,20 +25,19 @@
       </div>
     </div>
     <!-- Small Display Sidebar -->
-    <div class="flex w-full md:hidden h-12">
+    <div class="flex w-full md:hidden">
       <div class="flex flex-col w-full align-middle">
         <div class="bg-gray-100">
           <p
             class="w-min h-full p-1 text-2xl font-extrabold"
-            @mouseover="mobile.hovering = true"
+            @click="mobile.hovering = !mobile.hovering"
           >
             Recipes
           </p>
         </div>
         <ul
-          class="h-full pt-4 p-1"
+          class="pt-4 p-1 overflow-y-scroll m-h-32"
           :class="{ hidden: !mobile.hovering }"
-          @mouseleave="mobile.hovering = false"
         >
           <li
             class="break-words hover:text-blue-500 font-semibold"
@@ -64,7 +63,7 @@ export default {
           link: "red-lentil-curry",
           name: "Red Lentil Curry",
           tags: ["curry", "indian", "lentils"],
-        }
+        },
       ],
     };
   },
