@@ -1,6 +1,16 @@
 <template>
   <div>
-    <input v-model="search" type="text" placeholder="Search for recipe" />
+    <div class="md:flex hidden">
+      <input v-model="search" type="text" placeholder="Search for recipe" />
+    </div>
+    <div class="flex md:hidden">
+      <input
+        v-model="search"
+        @keydown="searchFn"
+        type="text"
+        placeholder="Search for recipe"
+      />
+    </div>
   </div>
 </template>
 <script>
@@ -20,8 +30,8 @@ export default {
       required: true,
     },
   },
-  watch: {
-    search: function(newSearch, oldSearch) {
+  methods: {
+    searchFn: function (newSearch, oldSearch) {
       const array = [];
 
       if (typeof this.search === "undefined") {
@@ -44,6 +54,11 @@ export default {
       }
       this.$emit("filtered-dt", array);
       return array;
+    },
+  },
+  watch: {
+    search: function (newSearch, oldSearch) {
+      this.searchFn(newSearch, oldSearch)
     },
   },
 };
