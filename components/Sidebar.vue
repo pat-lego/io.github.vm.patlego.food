@@ -36,7 +36,7 @@
           <li
              class="break-words hover:text-blue-500 font-semibold"
           >
-              <Search class="w-1/2 justify-end	" :data="list" :field="'name'" @filtered-dt="filteredResult" />
+              <Search class="w-1/2 justify-end" :data="list" :field="'name'" @filtered-dt="filteredResult" />
           </li>
           <li
             class="break-words hover:text-blue-500 font-semibold"
