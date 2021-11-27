@@ -33,10 +33,13 @@
           class="pt-4 p-1 overflow-y-scroll m-h-32"
           :class="{ hidden: !mobile.hovering }"
         >
-          <li
-             class="break-words hover:text-blue-500 font-semibold"
-          >
-              <Search class="w-1/2 justify-end" :data="list" :field="'name'" @filtered-dt="filteredResult" />
+          <li class="break-words hover:text-blue-500 font-semibold">
+            <Search
+              class="w-1/2 justify-end"
+              :data="list"
+              :field="'name'"
+              @filtered-dt="filteredResult"
+            />
           </li>
           <li
             class="break-words hover:text-blue-500 font-semibold"
@@ -64,16 +67,16 @@ export default {
           tags: ["curry", "indian", "lentils"],
         },
       ],
-      filteredList: []
+      filteredList: [],
     };
   },
   mounted() {
     this.filteredList = this.list;
   },
   methods: {
-    filteredResult: function(result) {
+    filteredResult: function (result) {
       this.filteredList = result;
-    }
-  }
+    },
+  },
 };
 </script>

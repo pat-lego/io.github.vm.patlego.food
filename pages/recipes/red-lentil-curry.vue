@@ -2,12 +2,12 @@
   <div class="flex flex-col md:flex-row h-full">
     <Sidebar />
     <div class="md:pt-10 flex flex-col w-full md:border-l-4">
-      <div class="flex w-full justify-end">
-        <div class="pr-4">
+      <div class="flex w-full justify-start md:justify-end">
+        <div class="pl-1 md:pr-4">
           <Home />
         </div>
       </div>
-      <div class="flex w-full justify-center">
+      <div class="flex w-full justify-center flex-1">
         <p class="font-bold text-xl md:text-3xl underline text-center">
           Red Lentil Curry
         </p>
