@@ -1,29 +1,38 @@
 <template>
-  <div class="flex">
+  <div class="flex w-full">
     <!-- Desktop -->
-    <div class="p-4 hidden md:flex flex-col w-full">
-      <p class="pb-2 text-xl md:text-2xl">Ingredients</p>
-      <ul>
-        <li v-for="ingredient in ingredients" :key="ingredient.name">
-          <p class="font-bold">{{ formatIngredients(ingredient) }}</p>
+    <div class="hidden md:flex flex-col w-full">
+      <div class="flex flex-row w-full justify-center">
+        <p class="pb-2 text-2xl w-full text-center">Ingredients</p>
+      </div>
+      <ul class="flex flex-col w-full justify-center">
+        <li class="flex flex-col items-center justify-start w-full p-2" v-for="ingredient in formatIngredients" :key="ingredient.name">
+          <p class="font-bold">{{ ingredient.name }}</p>
           <p>
             <span class="italic">Amount:</span> {{ ingredient.amount }}
             {{ ingredient.unit }}
+          </p>
+          <p class="italic bold" v-if="ingredient.optional">
+            Optional
           </p>
         </li>
       </ul>
     </div>
     <!-- Mobile -->
-    <div class="p-4 md:hidden flex flex-col w-full items-center">
-      <div class="flex flex-row w-full h-10" @click="collapse">
-        <p class="pb-2 text-2xl">Ingredients</p>
-        <div class="p-2">
+    <div class="pt-4 md:hidden flex flex-col w-full justify-center items-center">
+      <div class="flex flex-row w-full justify-center" @click="collapse">
+        <p class="flex w-1/2 justify-end pb-2 text-2xl text-center">Ingredients</p>
+        <div class="w-1/5 p-2">
           <font-awesome-icon :icon="['fas', `arrow-${direction}`]" />
         </div>
       </div>
-      <ul :class="{hidden : direction === 'up'}">
-        <li v-for="ingredient in ingredients" :key="ingredient.name">
-          <p class="font-bold">{{ formatIngredients(ingredient) }}</p>
+      <ul class="flex flex-col w-full justify-center" :class="{ hidden: direction === 'up' }">
+        <li
+          class="flex flex-col items-center justify-start w-full"
+          v-for="ingredient in formatIngredients"
+          :key="ingredient.name"
+        >
+          <p class="font-bold">{{ ingredient.name }}</p>
           <p>
             <span class="italic">Amount:</span> {{ ingredient.amount }}
             {{ ingredient.unit }}
@@ -43,24 +52,25 @@ export default {
   },
   data() {
     return {
-        direction: 'up'
+      direction: "up",
     };
   },
-  methods: {
-    collapse: function() {
-        if (this.direction === 'up') {
-            this.direction = 'down'
-        } else {
-            this.direction = 'up';
-        }
-
+  computed: {
+    formatIngredients: function () {
+      for (let i = 0; i < this.ingredients.length; i++) {
+        this.ingredients[i].name =
+          this.ingredients[i].name.charAt(0).toUpperCase() +
+          this.ingredients[i].name.slice(1).toLowerCase();
+      }
+      return this.ingredients;
     },
-    formatIngredients: function (ingredient) {
-      if (ingredient) {
-        return (
-          ingredient.name.charAt(0).toUpperCase() +
-          ingredient.name.slice(1).toLowerCase()
-        );
+  },
+  methods: {
+    collapse: function () {
+      if (this.direction === "up") {
+        this.direction = "down";
+      } else {
+        this.direction = "up";
       }
     },
   },

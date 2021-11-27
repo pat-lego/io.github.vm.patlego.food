@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col md:flex-row h-full">
     <Sidebar />
-    <div class="flex flex-col w-full border-l-4">
+    <div class="flex flex-col w-full border-l-4 md:border-l-4">
       <p
         class="flex w-full font-extrabold justify-center md:text-3xl text-xl p-2 md:p-8 uppercase"
       >
