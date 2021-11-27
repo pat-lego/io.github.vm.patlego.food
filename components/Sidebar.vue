@@ -21,7 +21,7 @@
     <!-- Small Display Sidebar -->
     <div class="flex w-full md:hidden">
       <div class="flex flex-col w-full align-middle">
-        <div class="flex flex-row w-full bg-gray-100">
+        <div class="flex flex-row w-full md:bg-gray-100">
           <p
             class="w-min h-full p-1 pr-2 text-2xl font-extrabold"
             @click="mobile.hovering = !mobile.hovering"
