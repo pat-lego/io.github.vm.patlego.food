@@ -13,7 +13,7 @@
             v-for="item in filteredList"
             :key="item.name"
           >
-            <a :href="'recipes/' + item.link">{{ item.name }}</a>
+            <nuxt-link :to="'/recipes/' + item.link">{{ item.name }}</nuxt-link>
           </li>
         </ul>
       </div>
@@ -46,7 +46,7 @@
             v-for="item in filteredList"
             :key="item.name"
           >
-            <a :href="'recipes/' + item.link">{{ item.name }}</a>
+            <nuxt-link :to="'/recipes/' + item.link">{{ item.name }}</nuxt-link>
           </li>
         </ul>
       </div>
