@@ -41,13 +41,18 @@ export default {
           unit: "tablespoon",
         },
         {
-          name: "Cumin seeds",
+          name: "Cumin powder",
           amount: 1,
           unit: "tablespoon",
         },
         {
-          name: "Coriander seeds",
-          amount: 11,
+          name: "Cardamom powder",
+          amount: 1,
+          unit: "tablespoon",
+        },
+         {
+          name: "Garam Masala powder",
+          amount: 1,
           unit: "tablespoon",
         },
         {
@@ -76,7 +81,7 @@ export default {
           unit: "teaspoons",
         },
         {
-          name: "Dried brown lentils",
+          name: "Dried red lentils",
           amount: 1,
           unit: "cup",
         },
@@ -88,7 +93,12 @@ export default {
         },
         {
           name: "water",
-          amount: 3,
+          amount: 1,
+          unit: "cups",
+        },
+        {
+          name: "vegetable broth",
+          amount: 2,
           unit: "cups",
         },
         {
@@ -109,17 +119,21 @@ export default {
       ],
       steps: [
         {
-          name: "Heat the coconut oil in a large pot or skillet over medium-high heat. Add the cumin and coriander seeds and toast until they start to brown, about 45 seconds. Add the garlic to the pot and let it brown, about 2 minutes.",
+          name: "Heat the coconut oil in a large pot or skillet over medium-high heat. Add the cumin, cardamom and garam masala powder and toast until fragrant, about 30 - 45 seconds. Add the garlic to the pot and let it brown, about 2 minutes.",
           number: 1,
         },
         {
-          name: "Add the can of crushed tomatoes, ginger, turmeric, and sea salt to the pot and cook, stirring the pot a few times, for 5 minutes. Add the lentils and, if using, the cayenne powder, and the water to the pot and bring it to a boil. Reduce the heat to low, cover the pot, and let it simmer for 35-40 minutes, or until the lentils are soft. Stir the pot a few times to prevent the lentils from sticking to the bottom. If the curry starts to look dry, add an extra ½ – 1 cup of water.",
+          name: "Add the can of crushed tomatoes, ginger, turmeric, and sea salt to the pot and cook, stirring the pot a few times, for 5 minutes. Add the lentils and, if using, the cayenne powder, and the water and the broth to the pot and bring it to a boil. Reduce the heat to low, cover the pot, and let it simmer for 35-40 minutes, or until the lentils are soft. Stir the pot a few times to prevent the lentils from sticking to the bottom. If the curry starts to look dry, add an extra ½ – 1 cup of water.",
           number: 2,
         },
         {
-          name: "Once the lentils are soft and the curry is thick, add the coconut milk and cherry tomatoes and bring the pot back to a simmer. Remove the pot from the heat and stir in the cilantro.",
+          name: "Once the lentils are soft and the curry is thick, add the coconut milk and bring the pot back to a simmer. Remove the pot from the heat.",
           number: 3,
         },
+        {
+          name: 'Using a ladle scoop some curry in a bowl and then top the curry with some fresh halved cherry tomatoes and cilantro.',
+          number: 4
+        }
       ],
     };
   },
