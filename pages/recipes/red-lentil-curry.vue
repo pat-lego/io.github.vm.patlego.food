@@ -1,36 +1,17 @@
 <template>
-  <div class="flex flex-col md:flex-row h-full">
-    <Sidebar />
-    <div class="md:pt-10 flex flex-col w-full md:border-l-4">
-      <div class="flex w-full justify-start md:justify-end">
-        <div class="pl-1 md:pr-4">
-          <Home />
-        </div>
-      </div>
-      <div class="flex w-full justify-center flex-1">
-        <p class="font-bold text-xl md:text-3xl underline text-center">
-          Red Lentil Curry
-        </p>
-      </div>
-      <div class="flex flex-col md:flex-row">
-        <div class="flex w-full md:w-1/2 md:pt-10">
-          <Ingredients :ingredients="ingredients" :direction="'down'" />
-        </div>
-        <div class="flex w-full md:w-1/2 md:pt-10">
-          <Steps :steps="steps" :direction="'up'" />
-        </div>
-      </div>
-    </div>
-  </div>
+  <Recipe :ingredients="ingredients" :steps="steps" :title="'Red Lentil Curry'"/>
 </template>
 <script>
-import Ingredients from "../../components/Ingredients.vue";
+import Recipe from '../../components/Recipe.vue';
+
 export default {
-  components: { Ingredients },
   head() {
     return {
       title: "Red Lentil Curry",
     };
+  },
+  components: {
+    Recipe
   },
   data() {
     return {

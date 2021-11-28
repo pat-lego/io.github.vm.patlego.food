@@ -78,6 +78,11 @@ export default {
           name: "Red Lentil Curry",
           tags: ["curry", "indian", "lentils"],
         },
+        {
+          link: "naan-bread",
+          name: "Naan Bread",
+          tags: ["bread", "indian", "naan", "curry"],
+        },
       ],
       filteredList: [],
     };

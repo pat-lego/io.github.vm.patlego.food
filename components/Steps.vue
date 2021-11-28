@@ -6,9 +6,9 @@
         <p class="pb-2 text-2xl w-full text-center">Steps</p>
       </div>
       <div class="flex w-full justify-center">
-        <ul class="flex flex-col w-1/2">
+        <ul class="flex flex-col w-2/3">
           <li
-            class="flex flex-row w-full p-4"
+            class="flex flex-row w-full p-4 break-words"
             v-for="step in steps"
             :key="step.name"
           >
