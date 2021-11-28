@@ -53,11 +53,11 @@ export default {
       type: Array,
       required: true,
     },
-  },
-  data() {
-    return {
-      direction: "up",
-    };
+    direction: {
+      type: String,
+      required: false,
+      default: 'down'
+    }
   },
   methods: {
     collapse: function () {

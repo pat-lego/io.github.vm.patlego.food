@@ -14,10 +14,10 @@
       </div>
       <div class="flex flex-col md:flex-row">
         <div class="flex w-full md:w-1/2 md:pt-10">
-          <Ingredients :ingredients="ingredients" />
+          <Ingredients :ingredients="ingredients" :direction="'down'" />
         </div>
         <div class="flex w-full md:w-1/2 md:pt-10">
-          <Steps :steps="steps" />
+          <Steps :steps="steps" :direction="'up'" />
         </div>
       </div>
     </div>

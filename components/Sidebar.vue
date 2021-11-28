@@ -21,7 +21,7 @@
     <!-- Small Display Sidebar -->
     <div class="flex w-full md:hidden">
       <div class="flex flex-col w-full align-middle">
-        <div class="flex flex-row w-full md:bg-gray-100">
+        <div class="flex flex-row w-full">
           <p
             class="w-min h-full p-1 pr-2 text-2xl font-extrabold"
             @click="mobile.hovering = !mobile.hovering"
@@ -29,26 +29,36 @@
             Recipes
           </p>
         </div>
-        <ul
-          class="pt-4 p-1 overflow-y-scroll m-h-32"
-          :class="{ hidden: !mobile.hovering }"
-        >
-          <li class="break-words hover:text-blue-500 font-semibold">
-            <Search
-              class="w-1/2 justify-end"
-              :data="list"
-              :field="'name'"
-              @filtered-dt="filteredResult"
-            />
-          </li>
-          <li
-            class="break-words hover:text-blue-500 font-semibold"
-            v-for="item in filteredList"
-            :key="item.name"
+        <div class="flex">
+          <ul
+            class="absolute pt-4 p-1 z-30 overflow-y-scroll m-h-32 bg-blue-300 rounded-md"
+            :class="{ hidden: !mobile.hovering }"
           >
-            <nuxt-link :to="'/recipes/' + item.link">{{ item.name }}</nuxt-link>
-          </li>
-        </ul>
+            <li class="break-words hover:text-blue-500 font-semibold">
+              <Search
+                class="w-1/2 justify-end"
+                :data="list"
+                :field="'name'"
+                @filtered-dt="filteredResult"
+              />
+            </li>
+            <li
+              class="
+                m-1
+                break-words
+                hover:text-blue-500
+                font-semibold
+                border-t-2 border-black
+              "
+              v-for="item in filteredList"
+              :key="item.name"
+            >
+              <nuxt-link :to="'/recipes/' + item.link">{{
+                item.name
+              }}</nuxt-link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
