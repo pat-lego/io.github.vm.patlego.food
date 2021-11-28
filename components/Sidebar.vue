@@ -31,7 +31,7 @@
         </div>
         <div class="flex">
           <ul
-            class="absolute pt-4 p-1 z-30 overflow-y-scroll m-h-32 bg-blue-300 rounded-md"
+            class="absolute pt-4 p-1 z-30 overflow-y-scroll m-h-32 bg-blue-300 rounded-md max-h-56"
             :class="{ hidden: !mobile.hovering }"
           >
             <li class="break-words hover:text-blue-500 font-semibold">
