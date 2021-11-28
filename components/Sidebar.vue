@@ -9,7 +9,7 @@
       <div class="flex flex-col items-center pt-8">
         <ul class="h-screen">
           <li
-            class="break-words hover:text-blue-500 font-semibold p-2"
+            class="break-words hover:text-blue-500 font-semibold p-2 "
             v-for="item in filteredList"
             :key="item.name"
           >
@@ -49,11 +49,13 @@
                 hover:text-blue-500
                 font-semibold
                 border-t-2 border-black
+                w-full
+                h-6
               "
               v-for="item in filteredList"
               :key="item.name"
             >
-              <nuxt-link :to="'/recipes/' + item.link">{{
+              <nuxt-link  class="h-full w-full" :to="'/recipes/' + item.link">{{
                 item.name
               }}</nuxt-link>
             </li>
