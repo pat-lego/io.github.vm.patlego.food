@@ -20,6 +20,9 @@
           <Steps :steps="steps" :direction="'up'" />
         </div>
       </div>
+      <div class="flex w-full">
+        <Suggestions :suggestions="suggestions" />
+      </div>
     </div>
   </div>
 </template>
@@ -28,13 +31,15 @@ import Ingredients from './Ingredients.vue';
 import Steps from './Steps.vue';
 import Home from './Home.vue';
 import Sidebar from './Sidebar.vue';
+import Suggestions from './Suggestions.vue'
 
 export default {
     components: {
         Sidebar,
         Home,
         Ingredients,
-        Steps
+        Steps,
+        Suggestions,
     },
     props: {
         title: {
@@ -48,6 +53,11 @@ export default {
         steps: {
             type: Array,
             required: true
+        },
+        suggestions: {
+          type: Array,
+          required: false,
+          default: undefined
         }
     }
 }
