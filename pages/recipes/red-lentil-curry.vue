@@ -27,8 +27,6 @@ export default {
               name: "Patrique Legault",
             },
             datePublished: "2021-12-04",
-            image:
-              "https://food.pat-lego.com/_nuxt/img/pat_kitchen.fb3f3bf.jpg",
             keywords:
               "cooking, home food, recipes, delicious, home meals, Patrique, Legault, red, curry, lentils, vegan, healthy, tomato sauce, indian cuisine",
           },

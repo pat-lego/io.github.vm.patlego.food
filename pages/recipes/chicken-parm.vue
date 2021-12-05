@@ -28,8 +28,6 @@ export default {
               name: "Patrique Legault",
             },
             datePublished: "2021-11-29",
-            image:
-              "https://food.pat-lego.com/_nuxt/img/pat_kitchen.fb3f3bf.jpg",
             keywords:
               "cooking, home food, recipes, delicious, home meals, Patrique, Legault, simple, chicken, italian, tomato sauce, parmesan",
           },
