@@ -3,7 +3,17 @@
     <Sidebar />
     <div class="flex flex-col w-full md:border-l-4">
       <p
-        class="flex w-full font-extrabold justify-center md:text-3xl text-xl p-2 md:p-8 uppercase"
+        class="
+          flex
+          w-full
+          font-extrabold
+          justify-center
+          md:text-3xl
+          text-xl
+          p-2
+          md:p-8
+          uppercase
+        "
       >
         Welcome to my recipe book
       </p>
@@ -71,6 +81,22 @@ export default {
           hid: "description",
           name: "description",
           content: "PatLego digitial recipe book",
+        },
+      ],
+      script: [
+        {
+          json: {
+            "@context": "http://schema.org",
+            "@type": "Article",
+            name: "PatLego Recipes",
+            author: {
+              "@type": "Person",
+              name: "Patrique Legault",
+            },
+            image:
+              "https://food.pat-lego.com/_nuxt/img/pat_kitchen.fb3f3bf.jpg",
+          },
+          type: "application/ld+json",
         },
       ],
     };
