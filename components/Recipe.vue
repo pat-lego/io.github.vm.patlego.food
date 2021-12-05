@@ -8,15 +8,15 @@
         </div>
       </div>
       <div class="flex flex-col w-full justify-center h-5 md:h-10">
-        <p class="font-bold text-xl md:text-3xl underline text-center">
+        <h1 class="font-bold text-xl md:text-3xl underline text-center">
           {{recipe['title']}}
-        </p>
-        <p v-if="recipe['author']" class="hidden md:inline text-sm md:text-md text-center">
+        </h1>
+        <h4 v-if="recipe['author']" class="hidden md:inline text-sm md:text-md text-center">
           Author: {{recipe['author']}}
-        </p>
-        <p v-if="recipe['published']" class="hidden md:inline w-full text-sm md:text-md text-center">
+        </h4>
+        <h4 v-if="recipe['published']" class="hidden md:inline w-full text-sm md:text-md text-center">
           Published: {{recipe['published']}}
-        </p>
+        </h4>
       </div>
       <div class="flex flex-col md:flex-row">
         <div class="flex w-full md:w-1/2 md:pt-10">
