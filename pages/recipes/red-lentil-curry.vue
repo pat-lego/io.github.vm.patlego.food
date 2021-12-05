@@ -1,8 +1,10 @@
 <template>
-  <Recipe :ingredients="ingredients" :steps="steps" :title="'Red Lentil Curry'" :suggestions="suggestions"/>
+  <Recipe
+    :recipe="recipe"
+  />
 </template>
 <script>
-import Recipe from '../../components/Recipe.vue';
+import Recipe from "../../components/Recipe.vue";
 
 export default {
   head() {
@@ -11,117 +13,120 @@ export default {
     };
   },
   components: {
-    Recipe
+    Recipe,
   },
   data() {
     return {
-      ingredients: [
-        {
-          name: "Coconut oil",
-          amount: 1,
-          unit: "tablespoon",
-        },
-        {
-          name: "Cumin powder",
-          amount: 1,
-          unit: "tablespoon",
-        },
-        {
-          name: "Cardamom powder",
-          amount: 1,
-          unit: "tablespoon",
-        },
-         {
-          name: "Garam Masala powder",
-          amount: 1,
-          unit: "tablespoon",
-        },
-        {
-          name: "Garlic",
-          amount: 12,
-          unit: "cloves",
-        },
-        {
-          name: "crushed tomatoes",
-          amount: 28,
-          unit: "ounces",
-        },
-        {
-          name: "chooped ginger",
-          amount: 2,
-          unit: "tablespoons",
-        },
-        {
-          name: "turmeric",
-          amount: 1,
-          unit: "tablespoon",
-        },
-        {
-          name: "sea salt",
-          amount: 2,
-          unit: "teaspoons",
-        },
-        {
-          name: "Dried red lentils",
-          amount: 1,
-          unit: "cup",
-        },
-        {
-          name: "cayenne powder",
-          amount: 1,
-          unit: "teaspoon",
-          optional: true,
-        },
-        {
-          name: "water",
-          amount: 1,
-          unit: "cups",
-        },
-        {
-          name: "vegetable broth",
-          amount: 2,
-          unit: "cups",
-        },
-        {
-          name: "coconut milk",
-          amount: 15,
-          unit: "ounces",
-        },
-        {
-          name: "cherry tomatoes",
-          amount: 15,
-          unit: undefined,
-        },
-        {
-          name: "cilantro",
-          amount: 1,
-          unit: "cup",
-        },
-      ],
-      steps: [
-        {
-          name: "Heat the coconut oil in a large pot or skillet over medium-high heat. Add the cumin, cardamom and garam masala powder and toast until fragrant, about 30 - 45 seconds. Add the garlic to the pot and let it brown, about 2 minutes.",
-          number: 1,
-        },
-        {
-          name: "Add the can of crushed tomatoes, ginger, turmeric, and sea salt to the pot and cook, stirring the pot a few times, for 5 minutes. Add the lentils and, if using, the cayenne powder, and the water and the broth to the pot and bring it to a boil. Reduce the heat to low, cover the pot, and let it simmer for 35-40 minutes, or until the lentils are soft. Stir the pot a few times to prevent the lentils from sticking to the bottom. If the curry starts to look dry, add an extra ½ – 1 cup of water.",
-          number: 2,
-        },
-        {
-          name: "Once the lentils are soft and the curry is thick, add the coconut milk and bring the pot back to a simmer. Remove the pot from the heat.",
-          number: 3,
-        },
-        {
-          name: 'Using a ladle scoop some curry in a bowl and then top the curry with some fresh halved cherry tomatoes and cilantro.',
-          number: 4
-        }
-      ],
-      suggestions: [
-        {
-          name: 'Naan Bread',
-          route: '/recipes/naan-bread'
-        }
-      ]
+      recipe: {
+        title: 'Red Lentil Curry',
+        ingredients: [
+          {
+            name: "Coconut oil",
+            amount: 1,
+            unit: "tablespoon",
+          },
+          {
+            name: "Cumin powder",
+            amount: 1,
+            unit: "tablespoon",
+          },
+          {
+            name: "Cardamom powder",
+            amount: 1,
+            unit: "tablespoon",
+          },
+          {
+            name: "Garam Masala powder",
+            amount: 1,
+            unit: "tablespoon",
+          },
+          {
+            name: "Garlic",
+            amount: 12,
+            unit: "cloves",
+          },
+          {
+            name: "crushed tomatoes",
+            amount: 28,
+            unit: "ounces",
+          },
+          {
+            name: "chooped ginger",
+            amount: 2,
+            unit: "tablespoons",
+          },
+          {
+            name: "turmeric",
+            amount: 1,
+            unit: "tablespoon",
+          },
+          {
+            name: "sea salt",
+            amount: 2,
+            unit: "teaspoons",
+          },
+          {
+            name: "Dried red lentils",
+            amount: 1,
+            unit: "cup",
+          },
+          {
+            name: "cayenne powder",
+            amount: 1,
+            unit: "teaspoon",
+            optional: true,
+          },
+          {
+            name: "water",
+            amount: 1,
+            unit: "cups",
+          },
+          {
+            name: "vegetable broth",
+            amount: 2,
+            unit: "cups",
+          },
+          {
+            name: "coconut milk",
+            amount: 15,
+            unit: "ounces",
+          },
+          {
+            name: "cherry tomatoes",
+            amount: 15,
+            unit: undefined,
+          },
+          {
+            name: "cilantro",
+            amount: 1,
+            unit: "cup",
+          },
+        ],
+        steps: [
+          {
+            name: "Heat the coconut oil in a large pot or skillet over medium-high heat. Add the cumin, cardamom and garam masala powder and toast until fragrant, about 30 - 45 seconds. Add the garlic to the pot and let it brown, about 2 minutes.",
+            number: 1,
+          },
+          {
+            name: "Add the can of crushed tomatoes, ginger, turmeric, and sea salt to the pot and cook, stirring the pot a few times, for 5 minutes. Add the lentils and, if using, the cayenne powder, and the water and the broth to the pot and bring it to a boil. Reduce the heat to low, cover the pot, and let it simmer for 35-40 minutes, or until the lentils are soft. Stir the pot a few times to prevent the lentils from sticking to the bottom. If the curry starts to look dry, add an extra ½ – 1 cup of water.",
+            number: 2,
+          },
+          {
+            name: "Once the lentils are soft and the curry is thick, add the coconut milk and bring the pot back to a simmer. Remove the pot from the heat.",
+            number: 3,
+          },
+          {
+            name: "Using a ladle scoop some curry in a bowl and then top the curry with some fresh halved cherry tomatoes and cilantro.",
+            number: 4,
+          },
+        ],
+        suggestions: [
+          {
+            name: "Naan Bread",
+            route: "/recipes/naan-bread",
+          },
+        ],
+      },
     };
   },
 };

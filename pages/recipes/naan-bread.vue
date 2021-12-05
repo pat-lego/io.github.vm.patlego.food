@@ -1,5 +1,5 @@
 <template>
-  <Recipe :ingredients="ingredients" :steps="steps" :title="'Naan Bread'" :suggestions="suggestions"/>
+  <Recipe :recipe="recipe"/>
 </template>
 <script>
 import Recipe from "../../components/Recipe.vue";
@@ -15,7 +15,9 @@ export default {
   },
   data() {
     return {
-      ingredients: [
+      recipe:{
+        title: 'Naan Bread',
+        ingredients: [
         {
           name: "Warm water (95 ~ 100 Fahrenheit)",
           amount: 0.5,
@@ -103,6 +105,7 @@ export default {
           route: '/recipes/red-lentil-curry'
         }
       ]
+      },
     };
   },
 };

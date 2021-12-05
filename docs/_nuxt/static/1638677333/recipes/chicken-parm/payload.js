@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/recipes/chicken-parm", {data:[{}],fetch:{},mutations:void 0});

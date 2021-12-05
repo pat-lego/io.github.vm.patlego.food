@@ -13,7 +13,7 @@
             :key="step.name"
           >
             <i class="pr-2">{{ step.number }}</i>
-            <p class="font-bold">{{ step.name }}</p>
+            <p class="font-bold"><span v-html="step.name"></span></p>
           </li>
         </ul>
       </div>

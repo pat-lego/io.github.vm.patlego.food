@@ -7,21 +7,24 @@
           <Home />
         </div>
       </div>
-      <div class="flex w-full justify-center h-5 md:h-10">
+      <div class="flex flex-col w-full justify-center h-5 md:h-10">
         <p class="font-bold text-xl md:text-3xl underline text-center">
-          {{title}}
+          {{recipe['title']}}
+        </p>
+        <p v-if="recipe['yields']" class="text-md md:text-xl text-center">
+          Yields: {{recipe['yields']}} portions
         </p>
       </div>
       <div class="flex flex-col md:flex-row">
         <div class="flex w-full md:w-1/2 md:pt-10">
-          <Ingredients :ingredients="ingredients" :direction="'down'" />
+          <Ingredients :ingredients="recipe['ingredients']" :direction="'down'" />
         </div>
         <div class="flex w-full md:w-1/2 md:pt-10">
-          <Steps :steps="steps" :direction="'up'" />
+          <Steps :steps="recipe['steps']" :direction="'up'" />
         </div>
       </div>
       <div class="flex w-full">
-        <Suggestions :suggestions="suggestions" />
+        <Suggestions :suggestions="recipe['suggestions']" />
       </div>
     </div>
   </div>
@@ -42,23 +45,10 @@ export default {
         Suggestions,
     },
     props: {
-        title: {
-          type: String,
+        recipe: {
+          type: Object,
           required: true
         },
-        ingredients: {
-            type: Array,
-            required: true
-        },
-        steps: {
-            type: Array,
-            required: true
-        },
-        suggestions: {
-          type: Array,
-          required: false,
-          default: undefined
-        }
     }
 }
 </script>

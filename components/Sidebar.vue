@@ -83,6 +83,11 @@ export default {
           name: "Naan Bread",
           tags: ["bread", "indian", "naan", "curry"],
         },
+        {
+          link: "chicken-parm",
+          name: "Chicken Parmesan",
+          tags: ["chicken", "italian", "parmesan"],
+        },
       ],
       filteredList: [],
     };
