@@ -93,7 +93,9 @@ export default {
               "@type": "Person",
               name: "Patrique Legault",
             },
-            image:`https://food.pat-lego.com${require('~/assets/index/patlego-kitchen.google.jpg')}`
+            image: `https://food.pat-lego.com${require("~/assets/index/patlego-kitchen.google.jpg")}`,
+            thumbnailUrl: `https://food.pat-lego.com${require("~/assets/index/patlego-kitchen.google.jpg")}`,
+            keywords: "cooking, home food, recipes, delicious, home meals, Patrique, Legault, simple",
           },
           type: "application/ld+json",
         },
