@@ -24,6 +24,8 @@ export default {
     return {
       recipe: {
         title: "Red Lentil Curry",
+        author: "Patrique Legault",
+        published: 'December 4th 2021',
         ingredients: [
           {
             name: "Coconut oil",

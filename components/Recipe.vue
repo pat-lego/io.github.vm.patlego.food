@@ -11,8 +11,11 @@
         <p class="font-bold text-xl md:text-3xl underline text-center">
           {{recipe['title']}}
         </p>
-        <p v-if="recipe['yields']" class="text-md md:text-xl text-center">
-          Yields: {{recipe['yields']}} portions
+        <p v-if="recipe['author']" class="hidden md:inline text-sm md:text-md text-center">
+          Author: {{recipe['author']}}
+        </p>
+        <p v-if="recipe['published']" class="hidden md:inline w-full text-sm md:text-md text-center">
+          Published: {{recipe['published']}}
         </p>
       </div>
       <div class="flex flex-col md:flex-row">

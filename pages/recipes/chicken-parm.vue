@@ -12,7 +12,8 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "Crispy and cheesy chicken parm that will make you question why you have't done this before",
+          content:
+            "Crispy and cheesy chicken parm that will make you question why you have't done this before",
         },
       ],
     };
@@ -24,7 +25,8 @@ export default {
     return {
       recipe: {
         title: "Chicken Parmesan",
-        yields: 2,
+        author: "Patrique Legault",
+        published: "November 29th 2021",
         ingredients: [
           {
             name: "Bread Crumbs",
