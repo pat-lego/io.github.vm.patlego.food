@@ -16,6 +16,22 @@ export default {
             "Simple naan bread that is elastic and delicious with a curry",
         },
       ],
+      script: [
+        {
+          json: {
+            "@context": "http://schema.org",
+            "@type": "Recipe",
+            cookTime: "PT1H",
+            name: "Naan Bread",
+            author: {
+              "@type": "Person",
+              name: "Patrique Legault",
+            },
+            datePublished: "2021-11-30",
+          },
+          type: "application/ld+json",
+        },
+      ],
     };
   },
   components: {

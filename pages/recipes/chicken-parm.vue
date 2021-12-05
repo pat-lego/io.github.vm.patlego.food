@@ -16,6 +16,22 @@ export default {
             "Crispy and cheesy chicken parm that will make you question why you have't done this before",
         },
       ],
+      script: [
+        {
+          json: {
+            "@context": "http://schema.org",
+            "@type": "Recipe",
+            cookTime: "PT1H",
+            name: "Chicken Parmesan",
+            author: {
+              "@type": "Person",
+              name: "Patrique Legault",
+            },
+            datePublished: "2021-11-29",
+          },
+          type: "application/ld+json",
+        },
+      ],
     };
   },
   components: {

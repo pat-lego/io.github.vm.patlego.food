@@ -15,6 +15,22 @@ export default {
           content: "A simple and delicious curry to feed the whole household",
         },
       ],
+      script: [
+        {
+          json: {
+            "@context": "http://schema.org",
+            "@type": "Recipe",
+            cookTime: "PT1.5H",
+            name: "Red lentil Curry",
+            author: {
+              "@type": "Person",
+              name: "Patrique Legault",
+            },
+            datePublished: "2021-12-04",
+          },
+          type: "application/ld+json",
+        },
+      ],
     };
   },
   components: {
