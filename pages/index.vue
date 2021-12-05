@@ -93,7 +93,7 @@ export default {
               "@type": "Person",
               name: "Patrique Legault",
             },
-            image:`http://food.pat-lego.com${require('~/assets/index/patlego-kitchen.google.jpg')}`
+            image:`https://food.pat-lego.com${require('~/assets/index/patlego-kitchen.google.jpg')}`
           },
           type: "application/ld+json",
         },
