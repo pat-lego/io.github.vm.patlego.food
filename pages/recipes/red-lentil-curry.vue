@@ -1,7 +1,5 @@
 <template>
-  <Recipe
-    :recipe="recipe"
-  />
+  <Recipe :recipe="recipe" />
 </template>
 <script>
 import Recipe from "../../components/Recipe.vue";
@@ -10,6 +8,13 @@ export default {
   head() {
     return {
       title: "Red Lentil Curry",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "A simple and delicious curry to feed the whole household",
+        },
+      ],
     };
   },
   components: {
@@ -18,7 +23,7 @@ export default {
   data() {
     return {
       recipe: {
-        title: 'Red Lentil Curry',
+        title: "Red Lentil Curry",
         ingredients: [
           {
             name: "Coconut oil",

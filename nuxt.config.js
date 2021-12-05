@@ -7,14 +7,12 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Recipes by pat-lego',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -39,6 +37,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/sitemap',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -63,5 +62,9 @@ export default {
       solid: true,
       brands: true
     }
-  }
+  },
+
+  sitemap: {
+    hostname: 'https://food.pat-lego.com',
+  },
 }

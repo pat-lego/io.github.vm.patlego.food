@@ -63,6 +63,18 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: "PatLego Recipes",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "PatLego digitial recipe book",
+        },
+      ],
+    };
+  },
   data() {
     return {
       food: [

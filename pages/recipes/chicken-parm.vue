@@ -8,6 +8,13 @@ export default {
   head() {
     return {
       title: "Chicken Parmesan",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Crispy and cheesy chicken parm that will make you question why you have't done this before",
+        },
+      ],
     };
   },
   components: {

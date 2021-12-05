@@ -8,6 +8,13 @@ export default {
   head() {
     return {
       title: "Naan Bread",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Simple naan bread that is elastic and delicious with a curry",
+        },
+      ],
     };
   },
   components: {
