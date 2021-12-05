@@ -80,7 +80,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "PatLego digitial recipe book",
+          content: "The digital recipe book of Patrique Legault, find healthy and easy to make recipes, from Italian to Indian cuisine there is something for everyone.",
         },
       ],
       script: [

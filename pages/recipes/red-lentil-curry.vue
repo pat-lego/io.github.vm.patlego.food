@@ -29,6 +29,8 @@ export default {
             datePublished: "2021-12-04",
             image:
               "https://food.pat-lego.com/_nuxt/img/pat_kitchen.fb3f3bf.jpg",
+            keywords:
+              "cooking, home food, recipes, delicious, home meals, Patrique, Legault, red, curry, lentils, vegan, healthy, tomato sauce, indian cuisine",
           },
           type: "application/ld+json",
         },
@@ -43,7 +45,7 @@ export default {
       recipe: {
         title: "Red Lentil Curry",
         author: "Patrique Legault",
-        published: 'December 4th 2021',
+        published: "December 4th 2021",
         ingredients: [
           {
             name: "Coconut oil",
