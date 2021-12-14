@@ -17,6 +17,9 @@
         <h4 v-if="recipe['published']" class="hidden md:inline w-full text-sm md:text-md text-center">
           Published: {{recipe['published']}}
         </h4>
+         <h4 v-if="recipe['published']" class="flex w-full text-sm md:text-md justify-center">
+           <twitter-follow />
+        </h4>
       </div>
       <div class="flex flex-col md:flex-row">
         <div class="flex w-full md:w-1/2 md:pt-10">
@@ -38,6 +41,7 @@ import Steps from './Steps.vue';
 import Home from './Home.vue';
 import Sidebar from './Sidebar.vue';
 import Suggestions from './Suggestions.vue'
+import TwitterFollow from './TwitterFollow.vue';
 
 export default {
     components: {
@@ -46,6 +50,7 @@ export default {
         Ingredients,
         Steps,
         Suggestions,
+        TwitterFollow,
     },
     props: {
         recipe: {

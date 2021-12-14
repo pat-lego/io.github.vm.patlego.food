@@ -11,12 +11,15 @@
           md:text-3xl
           text-xl
           p-2
-          md:p-8
+          md:p-6
           uppercase
         "
       >
         Welcome to my recipe book
       </p>
+      <div class="flex pb-2 justify-center w-full">
+        <twitter-follow />
+      </div>
       <div class="flex md:flex-row flex-col">
         <div class="w-1/2 flex flex-col justify-center items-center w-full">
           <img
@@ -72,6 +75,7 @@
   </div>
 </template>
 <script>
+import TwitterFollow from '../components/TwitterFollow.vue';
 export default {
   head() {
     return {
@@ -80,7 +84,8 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "The digital recipe book of Patrique Legault, find healthy and easy to make recipes, from Italian to Indian cuisine there is something for everyone.",
+          content:
+            "The digital recipe book of Patrique Legault, find healthy and easy to make recipes, from Italian to Indian cuisine there is something for everyone.",
         },
       ],
       script: [
@@ -95,7 +100,8 @@ export default {
             },
             image: `https://food.pat-lego.com${require("~/assets/index/food/20210824_193539.jpg")}`,
             thumbnail: `https://food.pat-lego.com${require("~/assets/index/food/20210824_193539.jpg")}`,
-            keywords: "cooking, home food, recipes, delicious, home meals, Patrique, Legault, simple",
+            keywords:
+              "cooking, home food, recipes, delicious, home meals, Patrique, Legault, simple",
           },
           type: "application/ld+json",
         },
