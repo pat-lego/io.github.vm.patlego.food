@@ -17,8 +17,9 @@
       >
         Welcome to my recipe book
       </p>
-      <div class="flex pb-2 justify-center w-full">
-        <twitter-follow />
+      <div class="flex flex-row justify-center w-full">
+        <twitter-follow class="p-2" />
+        <instagram-follow class="p-2" />
       </div>
       <div class="flex md:flex-row flex-col">
         <div class="w-1/2 flex flex-col justify-center items-center w-full">
