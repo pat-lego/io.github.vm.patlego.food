@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/recipes/mashed-potatoes", {data:[{}],fetch:{},mutations:void 0});

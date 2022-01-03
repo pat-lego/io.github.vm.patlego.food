@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/recipes/lemon-garlic-beans", {data:[{}],fetch:{},mutations:void 0});

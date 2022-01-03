@@ -9,7 +9,7 @@
       <div class="flex flex-col items-center pt-8">
         <ul class="h-screen">
           <li
-            class="break-words hover:text-blue-500 font-semibold p-2 "
+            class="break-words hover:text-blue-500 font-semibold p-2"
             v-for="item in filteredList"
             :key="item.name"
           >
@@ -31,7 +31,17 @@
         </div>
         <div class="flex">
           <ul
-            class="absolute pt-4 p-1 z-30 overflow-y-scroll m-h-32 bg-blue-300 rounded-md max-h-56"
+            class="
+              absolute
+              pt-4
+              p-1
+              z-30
+              overflow-y-scroll
+              m-h-32
+              bg-blue-300
+              rounded-md
+              max-h-56
+            "
             :class="{ hidden: !mobile.hovering }"
           >
             <li class="break-words hover:text-blue-500 font-semibold">
@@ -55,7 +65,7 @@
               v-for="item in filteredList"
               :key="item.name"
             >
-              <nuxt-link  class="h-full w-full" :to="'/recipes/' + item.link">{{
+              <nuxt-link class="h-full w-full" :to="'/recipes/' + item.link">{{
                 item.name
               }}</nuxt-link>
             </li>
@@ -87,6 +97,21 @@ export default {
           link: "chicken-parm",
           name: "Chicken Parmesan",
           tags: ["chicken", "italian", "parmesan"],
+        },
+        {
+          link: "meat-loaf",
+          name: "Meat Loaf",
+          tags: ["meat", "loaf", "canadian"],
+        },
+        {
+          link: "mashed-potatoes",
+          name: "Fluffy Garlic Mashed Potatoes",
+          tags: ["garlic", "mashed", "potatoes"],
+        },
+        {
+          link: "lemon-garlic-beans",
+          name: "Lemon Garlic Green Beans",
+          tags: ["lemon", "garlic", "green beans"],
         },
       ],
       filteredList: [],

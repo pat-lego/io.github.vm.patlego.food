@@ -17,6 +17,9 @@
         <h4 v-if="recipe['published']" class="hidden md:inline w-full text-sm md:text-md text-center">
           Published: {{recipe['published']}}
         </h4>
+        <h4 v-if="recipe['serves']" class="hidden md:inline w-full text-sm md:text-md text-center">
+          Serves: {{recipe['serves']}} {{servesUnit()}}
+        </h4>
          <h4 class="flex w-full text-sm md:text-md justify-center">
            <twitter-follow class="p-1" />
            <instagram-follow class="p-1 z-10"/>
@@ -58,6 +61,17 @@ export default {
           type: Object,
           required: true
         },
+    },
+    methods: {
+      servesUnit() {
+        if (this.recipe['serves']) {
+          if (this.recipe['serves'] > 1) {
+            return 'people'
+          }
+          return 'person'
+        }
+        return undefined
+      }
     }
 }
 </script>

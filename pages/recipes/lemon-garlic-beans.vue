@@ -1,0 +1,117 @@
+<template>
+  <Recipe :recipe="recipe" />
+</template>
+<script>
+import Recipe from "../../components/Recipe.vue";
+
+export default {
+  head() {
+    return {
+      title: "Lemon Garlic Breen Beans",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Crunchy Lemon Gralic Green Beans",
+        },
+      ],
+      script: [
+        {
+          json: {
+            "@context": "http://schema.org",
+            "@type": "Recipe",
+            cookTime: "PT1.5H",
+            name: "Crunchy Lemon Gralic Green Beans",
+            author: {
+              "@type": "Person",
+              name: "Patrique Legault",
+            },
+            datePublished: "2022-01-03",
+            keywords:
+              "cooking, home food, recipes, delicious, home meals, Patrique, Legault, crunchy, lemon, garlic, green beans",
+          },
+          type: "application/ld+json",
+        },
+      ],
+    };
+  },
+  components: {
+    Recipe,
+  },
+  data() {
+    return {
+      recipe: {
+        title: "Lemon Garlic Breen Beans",
+        author: "Patrique Legault",
+        published: "January 3rd 2022",
+        serves: 3,
+        ingredients: [
+          {
+            name: "Garlic",
+            amount: 5,
+            unit: "cloves",
+          },
+          {
+            name: "Butter",
+            amount: 4,
+            unit: "tablespoons"
+          },
+          {
+            name: "Lemon",
+            amount: 1/2,
+            unit: undefined
+          },
+          {
+            name: "Salt",
+            amount: 2,
+            unit: "teaspoons"
+          },
+          {
+            name: "Pepper",
+            amount: 2,
+            unit: "teaspoons"
+          },
+          {
+            name: "Green Beans",
+            amount: 350,
+            unit: "grams"
+          },
+          {
+            name: "Fresh Dill",
+            amount: 2,
+            unit: "stems"
+          }
+        ],
+        steps: [
+          {
+            name: "Juice the lemon, wash and trim the green beans and lastly finelly chop the dill",
+            number: 1
+          },
+          {
+            name: "Using a large frying pan place it on medium high, and place the butter in the pan",
+            number: 2
+          },
+          {
+            name: "Once the butter is melted put the garlic in the pan and wait toss it until it turns golden brown",
+            number: 3
+          },
+          {
+            name: "Put the green beans in the pan and toss in the garlic butter mix, continue to cook until they turn bright green",
+            number: 4
+          },
+          {
+            name: "Once they are bright green green toss the lemon juice and fresh dill and cover the green beans. Let it cook an extra minute and then serve immediately",
+            number: 5
+          },
+        ],
+        suggestions: [
+          {
+            name: "Meat Loaf",
+            route: "/recipes/meat-loaf",
+          },
+        ],
+      },
+    };
+  },
+};
+</script>

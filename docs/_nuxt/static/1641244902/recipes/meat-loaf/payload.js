@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/recipes/meat-loaf", {data:[{}],fetch:{},mutations:void 0});
