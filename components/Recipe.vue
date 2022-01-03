@@ -7,8 +7,8 @@
           <Home />
         </div>
       </div>
-      <div class="flex flex-col w-full justify-center h-5 md:h-10">
-        <h1 class="font-bold text-xl md:text-3xl underline text-center">
+      <div class="flex flex-col w-full justify-center h-10">
+        <h1 class="font-bold md:text-3xl underline text-center">
           {{recipe['title']}}
         </h1>
         <h4 v-if="recipe['author']" class="hidden md:inline text-sm md:text-md text-center">
